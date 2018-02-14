@@ -1,0 +1,22 @@
+{
+  "name": "thewirralwheelers",
+  "version": "1.0.0",
+  "description": "The Wirral Wheelers Cycling Club website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjp666/TheWirralWheelers.git"
+  },
+  "author": "Chris Podmore",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cjp666/TheWirralWheelers/issues"
+  },
+  "homepage": "https://github.com/cjp666/TheWirralWheelers#readme",
+  "dependencies": {
+    "eslint": "^4.17.0"
+  }
+}

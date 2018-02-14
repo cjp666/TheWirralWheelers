@@ -7,3 +7,8 @@ The Wirral Wheelers Cycling Club website and Google Assistant
 [![GitHub stars](https://img.shields.io/github/stars/cjp666/TheWirralWheelers.svg)](https://github.com/cjp666/TheWirralWheelers/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/cjp666/TheWirralWheelers.svg)](https://github.com/cjp666/TheWirralWheelers/network)
 
+
+
+### The Team
+Lead
+- [Chris Podmore](https://github/cjp666)

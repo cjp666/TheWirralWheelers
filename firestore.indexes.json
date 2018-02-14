@@ -1,0 +1,13 @@
+{
+    "indexes": [
+        {
+            "collectionId": "rides",
+            "fields": [
+                {
+                    "fieldPath": "date",
+                    "mode": "ASCENDING"
+                }
+            ]
+        }
+    ]
+}
