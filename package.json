@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/cjp666/TheWirralWheelers#readme",
   "dependencies": {
-    "eslint": "^4.17.0"
-  }
+    "eslint": "^4.17.0",
+    "firebase-admin": "^5.9.0",
+    "firebase-functions": "^0.8.1"
+  },
+  "devDependencies": {}
 }
