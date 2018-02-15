@@ -61,23 +61,22 @@ function nextRide(assistant) {
         .limit(1)
         .get()
         .then(rides => {
-            if (rides.size === 0) {
-                return assistant.tell('I am sorry but I am unable to locate the details of the next ride, you might need to check the website or Facebook');
+            let message = 'I am sorry but I am unable to locate the details of the next ride, you might need to check the website or Facebook';
+            if (rides.size > 0) {
+                rides.forEach(ride => {
+                    const data = ride.data();
+                    if (data.isEvent) {
+                        message = data.description;
+                    } else {
+                        const rideDate = new Date(data.date);
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        message = `The next ride is level ${data.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
+                            + ` being lead by ${data.rideLeader} and will be leaving from ${data.start}`
+                            + ` heading for ${data.lunch}`;
+                    }
+                });
             }
-            let message = 'Unable to locate the next ride';
-            rides.forEach(ride => {
-                const data = ride.data();
-                if (data.isEvent) {
-                    message = data.description;
-                } else {
-                    const rideDate = new Date(data.date);
-                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                    message = `The next ride is level ${data.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
-                        + ` being lead by ${data.rideLeader} and will be leaving from ${data.start}`
-                        + ` heading for ${data.lunch}`;
-                }
-            });
-            return assistant.tell(message);
+            return assistant.ask(appendAnythingElse(message));
         })
         .catch(error => {
             console.error(error);
@@ -93,23 +92,22 @@ function previousRide(assistant) {
         .get()
         .then(rides => {
             console.log(rides.size);
-            if (rides.size === 0) {
-                return assistant.tell('I am sorry but I am unable to locate the details of the last ride, you might need to check the website or Facebook');
+            let message = 'I am sorry but I am unable to locate the details of the last ride, you might need to check the website or Facebook';
+            if (rides.size > 0) {
+                rides.forEach(ride => {
+                    const data = ride.data();
+                    if (data.isEvent) {
+                        message = data.description;
+                    } else {
+                        const rideDate = new Date(data.date);
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        message = `The last ride was ${rideDate.toLocaleDateString('en-gb', options)}`
+                            + ` from ${data.start} and was lead by ${data.rideLeader}`
+                            + ` with lunch at ${data.lunch}`;
+                    }
+                });
             }
-            let message = 'Unable to locate the last ride';
-            rides.forEach(ride => {
-                const data = ride.data();
-                if (data.isEvent) {
-                    message = data.description;
-                } else {
-                    const rideDate = new Date(data.date);
-                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                    message = `The last ride was ${rideDate.toLocaleDateString('en-gb', options)}`
-                        + ` from ${data.start} and was lead by ${data.rideLeader}`
-                        + ` with lunch at ${data.lunch}`;
-                }
-            });
-            return assistant.tell(message);
+            return assistant.ask(appendAnythingElse(message));
         })
         .catch(error => {
             console.error(error);
@@ -125,4 +123,13 @@ function todaysRide(assistant) {
 function tomorrowsRide(assistant) {
     console.log('tomorrowsRide');
     assistant.tell('There is no ride tomorrow');
+}
+
+function appendAnythingElse(message) {
+    let result = message;
+    if (!result.endsWith('.')) {
+        result += '.';
+    }
+    result += ' Is there anything else I can help you with?'
+    return result;
 }
