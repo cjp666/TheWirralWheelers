@@ -19,7 +19,9 @@ To launch The Wirral Wheelers assistant
 
 Once in The Wirral Wheelers assistant you can ask things along the lines of:
 > Tell me about the Wirral Wheelers
+
 > When is the next ride?
+
 > When was the last ride?
 
 And when you are finished, just say
