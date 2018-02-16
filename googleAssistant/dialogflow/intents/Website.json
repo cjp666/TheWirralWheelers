@@ -1,0 +1,28 @@
+{
+  "id": "58116375-d383-4cde-895a-8c9946e53e4e",
+  "name": "Website",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "The website for the Wirral Wheelers is www.wirralwheelers.co.uk"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518766588,
+  "fallbackIntent": false,
+  "events": []
+}

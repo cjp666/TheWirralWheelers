@@ -1,0 +1,38 @@
+{
+  "id": "e5d7590d-5068-4a57-8096-0c89e060240c",
+  "name": "Ride",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ride",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "8928f0da-b79c-4e8d-b438-57400476b513",
+          "required": false,
+          "dataType": "@rideDay",
+          "name": "rideDay",
+          "value": "$rideDay",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518719136,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "value": "next",
+    "synonyms": [
+      "next",
+      "sunday",
+      "sundays"
+    ]
+  },
+  {
+    "value": "previous",
+    "synonyms": [
+      "previous",
+      "last"
+    ]
+  },
+  {
+    "value": "todays",
+    "synonyms": [
+      "todays",
+      "today"
+    ]
+  },
+  {
+    "value": "yesterdays",
+    "synonyms": [
+      "yesterdays",
+      "yesterday"
+    ]
+  },
+  {
+    "value": "tomorrows",
+    "synonyms": [
+      "tomorrows",
+      "tomorrow"
+    ]
+  }
+]

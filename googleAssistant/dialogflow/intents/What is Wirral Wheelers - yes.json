@@ -1,0 +1,33 @@
+{
+  "id": "9a04a29b-f25e-41a4-b7a4-d32ee2dea71e",
+  "parentId": "e67c10a6-35b7-4b69-9b16-077259920a06",
+  "rootParentId": "e67c10a6-35b7-4b69-9b16-077259920a06",
+  "name": "What is Wirral Wheelers - yes",
+  "auto": true,
+  "contexts": [
+    "WhatisWirralWheelers-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WhatisWirralWheelers.WhatisWirralWheelers-yes",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "We cycle mostly on surfaced roads at an average speed of 10-12 miles per hour - but speeds and surfaces do alter. All you need is a normal road bike to ride with us. We arrange routes with plenty of sight-seeing, eating and drinking. Our rides are led by experienced runs leaders"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518261819,
+  "fallbackIntent": false,
+  "events": []
+}

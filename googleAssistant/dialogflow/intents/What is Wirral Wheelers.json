@@ -1,0 +1,35 @@
+{
+  "id": "e67c10a6-35b7-4b69-9b16-077259920a06",
+  "name": "What is Wirral Wheelers",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "WhatisWirralWheelers-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "We are a cycling club based on the Wirral Peninsular and run regular Sunday rides taking in the lanes of Wirral, Cheshire, and the hillier parts of North Wales. Would you like to hear more?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518261042,
+  "fallbackIntent": false,
+  "events": []
+}

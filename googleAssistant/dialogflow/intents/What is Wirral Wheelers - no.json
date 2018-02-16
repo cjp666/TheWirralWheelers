@@ -1,0 +1,33 @@
+{
+  "id": "9473d376-ad70-450e-82bd-c4cfeded9c8d",
+  "parentId": "e67c10a6-35b7-4b69-9b16-077259920a06",
+  "rootParentId": "e67c10a6-35b7-4b69-9b16-077259920a06",
+  "name": "What is Wirral Wheelers - no",
+  "auto": true,
+  "contexts": [
+    "WhatisWirralWheelers-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WhatisWirralWheelers.WhatisWirralWheelers-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "How may I help you then?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518262070,
+  "fallbackIntent": false,
+  "events": []
+}

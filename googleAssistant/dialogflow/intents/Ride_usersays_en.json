@@ -1,0 +1,362 @@
+[
+  {
+    "id": "1bc09efc-58a6-4d6c-877f-3835bfe19756",
+    "data": [
+      {
+        "text": "Sundays",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "7aea3968-8d88-4a07-8880-d82ce2ab9d1a",
+    "data": [
+      {
+        "text": "last",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "39d63d6d-d94d-49aa-81dd-595f32b3ccaa",
+    "data": [
+      {
+        "text": "previous",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "24461aab-66e8-4d12-8471-1809980538d0",
+    "data": [
+      {
+        "text": "tomorrows",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "add3234e-9ec9-4a01-b398-a2bdc5070545",
+    "data": [
+      {
+        "text": "next",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "d1d47a14-1504-41a5-b346-60f73689b4b2",
+    "data": [
+      {
+        "text": "tell me about the ride on ",
+        "userDefined": false
+      },
+      {
+        "text": "Sunday",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "354aec48-25e1-4cec-b7cf-c5c379db313e",
+    "data": [
+      {
+        "text": "tell me about ",
+        "userDefined": false
+      },
+      {
+        "text": "Sundays",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "fb1574cb-2935-4698-9410-2a603961fdfa",
+    "data": [
+      {
+        "text": "tell me about the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "21a7cb35-bb23-47ff-9496-cf8302a5594c",
+    "data": [
+      {
+        "text": "tell me about ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrows",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "507b05d9-41d4-4dbb-911a-e28e15396a82",
+    "data": [
+      {
+        "text": "what was the ride ",
+        "userDefined": false
+      },
+      {
+        "text": "yesterday",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "a1456e57-e662-4e01-86ff-3dbc2522e2de",
+    "data": [
+      {
+        "text": "what was ",
+        "userDefined": false
+      },
+      {
+        "text": "yesterdays",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "e696bb46-5cae-4e47-8636-e82e95920415",
+    "data": [
+      {
+        "text": "is there a ride ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrow",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "188ad3df-e0d4-45e8-9417-5b8b78321c30",
+    "data": [
+      {
+        "text": "what is the ride ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrow",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "bafa409d-967d-4889-8210-16dd003bda64",
+    "data": [
+      {
+        "text": "what is ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrows",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "b79dd3a7-4d4b-458a-a180-b0d0a3f8767d",
+    "data": [
+      {
+        "text": "when was the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "6c1a0853-5c48-4492-9e56-eee019963937",
+    "data": [
+      {
+        "text": "what was the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "36d2afd9-7452-41fd-92ca-9f8e9c7f957f",
+    "data": [
+      {
+        "text": "what is the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  },
+  {
+    "id": "aa533d83-8afa-47f2-a52d-8c4e182899ca",
+    "data": [
+      {
+        "text": "when is the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "rideDay",
+        "meta": "@rideDay",
+        "userDefined": false
+      },
+      {
+        "text": " ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518719136
+  }
+]
