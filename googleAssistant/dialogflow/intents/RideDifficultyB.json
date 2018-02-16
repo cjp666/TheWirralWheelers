@@ -1,0 +1,28 @@
+{
+  "id": "5e553061-32f1-4364-af29-5ced0ff7c277",
+  "name": "RideDifficultyB",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A ride with a difficulty level of B is approximately 50 to 60 miles and will contain some climbing. A B+ ride is usually of the same length but will include more climbing"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518768849,
+  "fallbackIntent": false,
+  "events": []
+}

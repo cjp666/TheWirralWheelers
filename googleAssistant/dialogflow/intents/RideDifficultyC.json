@@ -1,0 +1,28 @@
+{
+  "id": "4b99cabd-2bab-40c5-a3a7-5e4c748128f5",
+  "name": "RideDifficultyC",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Rides with a difficulty level of C are usually short and flat but may contain some small climbs. These rides are usually reserved for winter, although we do sometime run them in the summer months and are excellent rides for beginners"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518769012,
+  "fallbackIntent": false,
+  "events": []
+}

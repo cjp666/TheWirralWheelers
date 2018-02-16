@@ -1,0 +1,50 @@
+[
+  {
+    "id": "8d84c11c-0d54-4e1f-af3e-ad7afb694132",
+    "data": [
+      {
+        "text": "What is a D level ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769151
+  },
+  {
+    "id": "c374820c-3785-4811-98a9-8041f81b2c7b",
+    "data": [
+      {
+        "text": "What is a ride with a difficulty of D",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769151
+  },
+  {
+    "id": "0501193e-5866-4624-a160-6e48400cd005",
+    "data": [
+      {
+        "text": "What is a ride of level D",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769151
+  },
+  {
+    "id": "9f428fd1-17ca-4677-bb93-5f6aaffc8c4c",
+    "data": [
+      {
+        "text": "What is an easy ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769151
+  }
+]

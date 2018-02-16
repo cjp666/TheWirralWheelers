@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b6a891f1-9c0d-4334-91a7-c7363edc82e3",
+    "data": [
+      {
+        "text": "What is a difficulty C ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769012
+  },
+  {
+    "id": "76517111-5b43-4d47-ad4c-4d1e6ddf9660",
+    "data": [
+      {
+        "text": "What is a level C ride",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769012
+  },
+  {
+    "id": "5adefbaf-0e5d-448d-9c81-809141524128",
+    "data": [
+      {
+        "text": "What are the easier rides",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518769012
+  }
+]

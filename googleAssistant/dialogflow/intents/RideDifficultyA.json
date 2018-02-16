@@ -1,0 +1,28 @@
+{
+  "id": "49fb0de7-741b-4caf-b821-7dd5b1071fdd",
+  "name": "RideDifficultyA",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "A ride with a difficulty level of A is either a long ride or a ride with a lot of climbing, can also be a combination of both. You will require a good level of fitness for rides of this difficulty"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518768623,
+  "fallbackIntent": false,
+  "events": []
+}
