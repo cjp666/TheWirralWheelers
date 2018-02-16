@@ -11,7 +11,7 @@ The Wirral Wheelers Cycling Club website and Google Assistant
 Ride details are held in Google Firebase Firestore
 
 ## Google Assistant
-The Google Assistant was creating using DialogFlow with fulfillment being hosted in Google Firebase Functions
+The Google Assistant was creating using Dialogflow with fulfillment webhooks being hosted in Google Firebase Functions
 
 Examples:
 To launch The Wirral Wheelers assistant
