@@ -2,7 +2,6 @@
 The Wirral Wheelers Cycling Club website and Google Assistant
 
 [![Build status](https://ci.appveyor.com/api/projects/status/i3vhm8dpnubf08yg/branch/master?svg=true)](https://ci.appveyor.com/project/cjp666/thewirralwheelers/branch/master)
-https://ci.appveyor.com/api/projects/status/i3vhm8dpnubf08yg/branch/master?svg=true
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/cjp666/TheWirralWheelers/master/LICENSE)
 
 [![GitHub issues](https://img.shields.io/github/issues/cjp666/TheWirralWheelers.svg)](https://github.com/cjp666/TheWirralWheelers/issues)
