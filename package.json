@@ -4,8 +4,7 @@
   "description": "The Wirral Wheelers Cycling Club website",
   "main": "index.js",
   "scripts": {
-    "build": "mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter",
-    "test": "mocha ./test/**/*.spec.js"
+    "test": "mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter"
   },
   "repository": {
     "type": "git",
