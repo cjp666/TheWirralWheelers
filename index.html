@@ -1,81 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>The Wirral Wheelers</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="images/favicon.ico">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                Wirral Wheelers
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
-                aria-controls="navbarCollapse"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class='nav-item active'>
-                        <a class="nav-link" href="index.html">Home
-                        </a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="rides.html">Rides</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/rideArchive">Ride Archive</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/proposedRides">Proposed Rides</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/gallary">Gallary</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/charity2016">Charity 2016</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/charity2017">Charity 2017</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/charity2018">Charity 2018</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-    <main role="main" class="container">
-        <h1>Testing</h1>
-    </main>
-
-    <footer role="footer" class="footer"></footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-    <script src="https://use.fontawesome.com/8c9ab5c7a2.js"></script>
-    <script src="scripts/main.js"></script>
-</body>
-
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="mocha.js"></script>
+    <script>mocha.setup('bdd');</script>
+    <script src="tests.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
 </html>

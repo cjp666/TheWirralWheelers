@@ -9,6 +9,8 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
+const rideDetails = require('./rideDetails');
+
 const RIDE_INTENT = 'ride';
 
 const d = new Date();
@@ -65,6 +67,7 @@ function nextRide(assistant) {
             if (rides.size > 0) {
                 rides.forEach(ride => {
                     const data = ride.data();
+                    const x = rideDetails.format(data);
                     if (data.isEvent) {
                         message = data.description;
                     } else {
@@ -91,7 +94,6 @@ function previousRide(assistant) {
         .limit(1)
         .get()
         .then(rides => {
-            console.log(rides.size);
             let message = 'I am sorry but I am unable to locate the details of the last ride, you might need to check the website or Facebook';
             if (rides.size > 0) {
                 rides.forEach(ride => {
