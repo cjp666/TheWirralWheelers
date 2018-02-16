@@ -12,4 +12,14 @@ describe('Basic test', function() {
         const result = rideDetails.format({});
         result.should.be.equal('testing');
     });
+
+    it('should return test 2', function() {
+        const result = rideDetails.doSomething({});
+        result.should.be.equal('test 2');
+    });
+
+    it('should not return test 3', function() {
+        const result = rideDetails.doSomething({});
+        result.should.not.be.equal('test 3');
+    });
 });
