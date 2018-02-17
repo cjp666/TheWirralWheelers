@@ -35,7 +35,7 @@ module.exports = { agent };
 
 function findRide(assistant) {
     let rideDay = parameters.rideDay;
-    if (!!rideDay === false) {
+    if (rideDay === '') {
         rideDay = 'next';
     }
 
@@ -43,17 +43,21 @@ function findRide(assistant) {
         case 'next':
             return nextRide(assistant);
         case 'previous':
-            previousRide(assistant);
-            break;
+            return previousRide(assistant);
         case 'todays':
-            todaysRide(assistant);
-            break;
+            return todaysRide(assistant);
         case 'tomorrows':
-            tomorrowsRide(assistant);
-            break;
+            return tomorrowsRide(assistant);
         default:
-            return assistant.tell('I do not understand when you want to know about');
+            return assistant.tell('I do not understand what day you want to know about');
     }
+}
+
+function getRide(assistant, rideDay) {
+    const queryField = 'date';
+    const queryOperation = '=';
+
+    
 }
 
 function nextRide(assistant) {
@@ -67,14 +71,13 @@ function nextRide(assistant) {
             if (rides.size > 0) {
                 rides.forEach(ride => {
                     const data = ride.data();
-                    const x = rideDetails.format(data);
                     if (data.isEvent) {
                         message = data.description;
                     } else {
                         const rideDate = new Date(data.date);
                         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                         message = `The next ride is level ${data.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
-                            + ` being lead by ${data.rideLeader} and will be leaving from ${data.start}`
+                            + ` being led by ${data.rideLeader} and will be leaving from ${data.start}`
                             + ` heading for ${data.lunch}`;
                     }
                 });
@@ -104,7 +107,7 @@ function previousRide(assistant) {
                         const rideDate = new Date(data.date);
                         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                         message = `The last ride was ${rideDate.toLocaleDateString('en-gb', options)}`
-                            + ` from ${data.start} and was lead by ${data.rideLeader}`
+                            + ` from ${data.start} and was led by ${data.rideLeader}`
                             + ` with lunch at ${data.lunch}`;
                     }
                 });
