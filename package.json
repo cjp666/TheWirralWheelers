@@ -6,6 +6,12 @@
   "scripts": {
     "test": "nyc mocha ./test/**/*.spec.js"
   },
+  "nyc": {
+    "exclude": [
+      "test/**/*.js", "coverage/**/*.js"
+    ],
+    "all": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cjp666/TheWirralWheelers.git"
