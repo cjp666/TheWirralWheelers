@@ -25,8 +25,5 @@ test_script:
   - nyc report --reporter=lcov
   - ./node_modules/.bin/codecov -t $CODECOV_TOKEN
 
-deploy:
-  - ps: firebase deploy --only functions --token $FIREBASE_TOKEN
-
 # Don't actually build.
 build: off
