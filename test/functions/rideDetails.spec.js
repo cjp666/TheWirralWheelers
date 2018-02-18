@@ -32,13 +32,6 @@ describe('no ride found message', function () {
     });
 });
 
-describe.skip('the details of a ride', function () {
-    it('should return no ride when there are no rides available', function () {
-        const result = rideDetails.buildText([], 'todays');
-        result.should.be.equal(NO_RIDE_TODAY);
-    });
-});
-
 describe('query operation', function() {
     it('should return = for today', function() {
         const result = rideDetails.getQueryOperation('todays');

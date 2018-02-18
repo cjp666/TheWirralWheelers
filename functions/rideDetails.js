@@ -12,19 +12,19 @@ const TOMORROWS_RIDE = 'tomorrows';
  * @returns {string} the text representation of a ride
  */
 const buildText = function(ride, rideDay) {
-    const rideDate = new Date(data.date);
+    const rideDate = new Date(ride.date);
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     let message = '';
 
-    if (data.isEvent) {
-        message = data.description;
+    if (ride.isEvent) {
+        message = ride.description;
         return message;
     }
 
     if (rideDay.toLowerCase() === PREVIOUS_RIDE) {
         message = `The last ride was ${rideDate.toLocaleDateString('en-gb', options)}`
-            + ` from ${data.start} and was led by ${data.rideLeader}`
-            + ` with lunch at ${data.lunch}`;
+            + ` from ${ride.start} and was led by ${ride.rideLeader}`
+            + ` with lunch at ${ride.lunch}`;
         return message;
     }
 
@@ -41,9 +41,9 @@ const buildText = function(ride, rideDay) {
             break;
     }
 
-    message = `${messageStart} ride is level ${data.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
-        + ` being led by ${data.rideLeader} and will be leaving from ${data.start}`
-        + ` heading for ${data.lunch}`;
+    message = `${messageStart} ride is level ${ride.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
+        + ` being led by ${ride.rideLeader} and will be leaving from ${ride.start}`
+        + ` heading for ${ride.lunch}`;
 
     return message;
 }
@@ -79,7 +79,6 @@ const getQueryOperation = function(rideDay) {
             return '<';
         case TODAYS_RIDE:
             return '=';
-            break;
         case TOMORROWS_RIDE:
             return '=';
         default:
