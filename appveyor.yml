@@ -27,3 +27,6 @@ test_script:
 
 # Don't actually build.
 build: off
+
+deploy_script:
+  -ps: . .\deploy.ps1
