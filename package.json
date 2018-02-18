@@ -4,11 +4,13 @@
   "description": "The Wirral Wheelers Cycling Club website",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha ./test/**/*.spec.js"
+    "test": "npm --prefix ./functions run lint && nyc mocha ./test/**/*.spec.js"
   },
   "nyc": {
     "exclude": [
-      "test/**/*.js", "coverage/**/*.js"
+      "test/**/*.js",
+      "coverage/**/*.js",
+      "scripts/main.js"
     ],
     "all": true
   },
@@ -23,12 +25,12 @@
   },
   "homepage": "https://github.com/cjp666/TheWirralWheelers#readme",
   "dependencies": {
-    "eslint": "^4.17.0",
     "firebase-admin": "^5.9.0",
     "firebase-functions": "^0.8.1",
     "istanbul": "^0.4.5"
   },
   "devDependencies": {
+    "eslint": "^4.17.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "codecov": "^3.0.0",
