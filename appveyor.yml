@@ -7,6 +7,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
+  - npm i -g eslint
   - npm i -g nyc
   - npm i -g firebase-tools
   - npm install
@@ -17,7 +18,7 @@ test_script:
   - node --version
   - npm --version
   # 
-  # npm --prefix ./functions run lint
+  - npm --prefix ./functions run lint
   # run tests
   - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
   - nyc report --reporter=lcov
