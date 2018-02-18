@@ -2,4 +2,14 @@ Write-Host 'Running AppVeyor deployment script' -ForegroundColor Yellow
 Write-Host "Build version : $env:APPVEYOR_BUILD_VERSION"
 Write-Host "Author        : $env:APPVEYOR_REPO_COMMIT_AUTHOR"
 Write-Host "Branch        : $env:APPVEYOR_REPO_BRANCH"
-Write-Host $env:CODECOV_TOKEN
+
+# we only want to deploy if on the master branch
+if ($env:APPVEYOR_REPO_BRANCH -notmatch 'master')
+{
+    Write-Host "Not deploying branch: $env:APPVEYOR_REPO_BRANCH - Exiting"
+    exit;
+}
+
+firebase deploy --only functions --token $FIREBASE_TOKEN
+
+Write-Host 'Deployment complete'
