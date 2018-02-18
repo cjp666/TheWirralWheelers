@@ -26,8 +26,7 @@ test_script:
   - ./node_modules/.bin/codecov -t $CODECOV_TOKEN
 
 deploy:
-  - provider: Script 
-  script: firebase deploy --only functions --token $FIREBASE_TOKEN
+  - ps: firebase deploy --only functions --token $FIREBASE_TOKEN
 
 # Don't actually build.
 build: off
