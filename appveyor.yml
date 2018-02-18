@@ -13,28 +13,20 @@ install:
   - npm i -g firebase-tools
   - npm install
 
-stages:
-  - test
-  - deploy
-
 # Post-install test scripts.
-run_tests:
-  stage: test
-  script:
-    # Output useful info for debugging
-    - node --version
-    - npm --version
-    # run eslint
-    - npm --prefix ./functions run lint
-    # run tests
-    - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
-    - nyc report --reporter=lcov
-    - ./node_modules/.bin/codecov -t $CODECOV_TOKEN
+test_script:
+  # Output useful info for debugging
+  - node --version
+  - npm --version
+  # run eslint
+  - npm --prefix ./functions run lint
+  # run tests
+  - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
+  - nyc report --reporter=lcov
+  - ./node_modules/.bin/codecov -t $CODECOV_TOKEN
 
-deploy_to_firebase:
-  stage: deploy
-  script:
-    - firebase deploy --only functions --token $FIREBASE_TOKEN
+deploy:
+  - firebase deploy --only functions --token $FIREBASE_TOKEN
 
 # Don't actually build.
 build: off
