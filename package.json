@@ -8,7 +8,9 @@
   },
   "nyc": {
     "exclude": [
-      "test/**/*.js", "coverage/**/*.js"
+      "test/**/*.js",
+      "coverage/**/*.js",
+      "scripts/main.js"
     ],
     "all": true
   },

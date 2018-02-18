@@ -86,3 +86,30 @@ describe('query date', function () {
         result.getTime().should.be.equal(new Date(2018, 2, 18, 0, 0, 0, 0).getTime());
     });
 });
+
+describe('isValidRideDay', function () {
+    it('should return true for \'next\'', function() {
+        const result = rideDetails.isValidRideDay('next');
+        result.should.be.true;
+    });
+
+    it('should return true for \'previous\'', function() {
+        const result = rideDetails.isValidRideDay('previous');
+        result.should.be.true;
+    });
+
+    it('should return true for \'todays\'', function() {
+        const result = rideDetails.isValidRideDay('todays');
+        result.should.be.true;
+    });
+
+    it('should return true for \'tomorrows\'', function() {
+        const result = rideDetails.isValidRideDay('tomorrows');
+        result.should.be.true;
+    });
+
+    it('should return false for \'other\'', function() {
+        const result = rideDetails.isValidRideDay('other');
+        result.should.be.false;
+    });
+});

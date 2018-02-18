@@ -1,18 +1,51 @@
 'use strict'
 
 const NEXT_RIDE = 'next';
-const PREVIOUS_RIDES = 'previous';
+const PREVIOUS_RIDE = 'previous';
 const TODAYS_RIDE = 'todays';
 const TOMORROWS_RIDE = 'tomorrows';
 
 /**
  * Builds the text details of the ride to be returned to the Google Assitant 
- * @param {*} rides 
+ * @param {*} ride - the rides collection item
  * @param {*} rideDay - valid values: previous / next / tomorrows / todays
  * @returns {string} the text representation of a ride
  */
-const buildText = function(rides, rideDay) {
-    return 'what';
+const buildText = function(ride, rideDay) {
+    const rideDate = new Date(data.date);
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let message = '';
+
+    if (data.isEvent) {
+        message = data.description;
+        return message;
+    }
+
+    if (rideDay.toLowerCase() === PREVIOUS_RIDE) {
+        message = `The last ride was ${rideDate.toLocaleDateString('en-gb', options)}`
+            + ` from ${data.start} and was led by ${data.rideLeader}`
+            + ` with lunch at ${data.lunch}`;
+        return message;
+    }
+
+    let messageStart = ''
+    switch (rideDay.toLowerCase()) {
+        case NEXT_RIDE:
+            messageStart = 'The next';
+            break;
+        case TODAYS_RIDE:
+            messageStart = 'Today\'s';
+            break;
+        case TOMORROWS_RIDE:
+            messageStart = 'Tomorrow\'s';
+            break;
+    }
+
+    message = `${messageStart} ride is level ${data.level} on ${rideDate.toLocaleDateString('en-gb', options)},`
+        + ` being led by ${data.rideLeader} and will be leaving from ${data.start}`
+        + ` heading for ${data.lunch}`;
+
+    return message;
 }
 
 /**
@@ -26,7 +59,7 @@ const noRideDefaultText = function(rideDay) {
         case NEXT_RIDE:
             message = 'I am sorry but I am unable to locate the details of the next ride, you might need to check the website or Facebook';
             break;
-        case PREVIOUS_RIDES:
+        case PREVIOUS_RIDE:
             message = 'I am sorry but I am unable to locate the details of the last ride, you might need to check the website or Facebook';
             break;
         case TODAYS_RIDE:
@@ -42,7 +75,7 @@ const noRideDefaultText = function(rideDay) {
 
 const getQueryOperation = function(rideDay) {
     switch (rideDay.toLowerCase()) {
-        case PREVIOUS_RIDES:
+        case PREVIOUS_RIDE:
             return '<';
         case TODAYS_RIDE:
             return '=';
@@ -65,4 +98,16 @@ const getQueryDate = function (rideDay, currentDate) {
     return date;   
 }
 
-module.exports = { buildText, noRideDefaultText, getQueryOperation, getQueryDate };
+const isValidRideDay = function(rideDay) {
+    switch (rideDay.toLowerCase()) {
+        case NEXT_RIDE:
+        case PREVIOUS_RIDE:
+        case TODAYS_RIDE:
+        case TOMORROWS_RIDE:
+            return true;
+        default:
+            return false;
+    }
+}
+
+module.exports = { buildText, noRideDefaultText, getQueryOperation, getQueryDate, isValidRideDay };
