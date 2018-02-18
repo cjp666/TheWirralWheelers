@@ -17,7 +17,7 @@ test_script:
   - node --version
   - npm --version
   # 
-  - npm --prefix ./functions run lint
+  # npm --prefix ./functions run lint
   # run tests
   - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
   - nyc report --reporter=lcov
