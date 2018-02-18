@@ -23,7 +23,7 @@ test_script:
   # run tests
   - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
   - nyc report --reporter=lcov
-  - ./node_modules/.bin/codecov -t $CODECOV_TOKEN
+  - ./node_modules/.bin/codecov -t %CODECOV_TOKEN%
 
 # Don't actually build.
 build: off
