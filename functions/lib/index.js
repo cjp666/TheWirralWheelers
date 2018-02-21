@@ -7,8 +7,10 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 admin.initializeApp(functions.config().firebase);
 const rideDetails_1 = require("./rideDetails");
+const appendAnythingElse_1 = require("./appendAnythingElse");
 const RIDE_INTENT = "ride";
 const rideDetails = new rideDetails_1.RideDetails();
+const appendAnythingElse = new appendAnythingElse_1.AppendAnythingElse();
 let parameters = {
     rideDay: ""
 };
@@ -76,14 +78,6 @@ function processRides(assistant, rides, rideDay) {
             message = rideDetails.buildText(data, rideDay);
         });
     }
-    return assistant.ask(appendAnythingElse(message));
-}
-function appendAnythingElse(message) {
-    let result = message;
-    if (!result.endsWith(".")) {
-        result += ".";
-    }
-    result += " Is there anything else I can help you with?";
-    return result;
+    return assistant.ask(appendAnythingElse.append(message));
 }
 //# sourceMappingURL=index.js.map
