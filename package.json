@@ -6,17 +6,11 @@
     "scripts": {
         "build": "npm --prefix ./functions run-script build",
         "test": "nyc ./node_modules/.bin/mocha ./test/**/*.spec.ts",
-        "test-appveyor":
-            "nyc ./node_modules/.bin/mocha ./test/**/*.spec.ts --reporter mocha-appveyor-reporter"
+        "test-appveyor": "nyc ./node_modules/.bin/mocha ./test/**/*.spec.ts --reporter mocha-appveyor-reporter"
     },
     "nyc": {
         "extension": [".ts", ".tsx"],
-        "exclude": [
-            "test/**/*.ts",
-            "coverage/**/*.*",
-            "scripts/main.js",
-            "**/*.js"
-        ],
+        "exclude": ["test/**/*.ts", "coverage/**/*.js", "scripts/main.js", "**/*.js"],
         "all": true
     },
     "repository": {

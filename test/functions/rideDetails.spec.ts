@@ -39,22 +39,34 @@ describe("no ride found message", function() {
 describe("query operation", function() {
     it("should return = for today", function() {
         const result = rideDetails.getQueryOperation("todays");
-        result.should.be.equal("==");
+        const queryOperation = result[0];
+        const queryDirection = result[1];
+        queryOperation.should.be.equal("==");
+        queryDirection.should.be.equal("");
     });
 
     it("should return = for tomorrow", function() {
         const result = rideDetails.getQueryOperation("tomorrows");
-        result.should.be.equal("==");
+        const queryOperation = result[0];
+        const queryDirection = result[1];
+        queryOperation.should.be.equal("==");
+        queryDirection.should.be.equal("");
     });
 
     it("should return < for previous", function() {
         const result = rideDetails.getQueryOperation("previous");
-        result.should.be.equal("<");
+        const queryOperation = result[0];
+        const queryDirection = result[1];
+        queryOperation.should.be.equal("<");
+        queryDirection.should.be.equal("desc");
     });
 
     it("should return >= for next", function() {
         const result = rideDetails.getQueryOperation("next");
-        result.should.be.equal(">=");
+        const queryOperation = result[0];
+        const queryDirection = result[1];
+        queryOperation.should.be.equal(">=");
+        queryDirection.should.be.equal("asc");
     });
 });
 
