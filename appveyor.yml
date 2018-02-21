@@ -7,8 +7,9 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - npm i -g eslint
-  - npm i -g eslint-plugin-promise
+  - npm i -g typescript
+  - npm i -g tslint
+  - npm i -g mocha chai ts-node
   - npm i -g nyc
   - npm i -g firebase-tools
   - npm install
@@ -21,10 +22,10 @@ test_script:
   # Output useful info for debugging
   - node --version
   - npm --version
-  # 
-  - npm --prefix ./functions run lint
+  # tslint -p tslint.json && tsc
+  - npm --prefix ./functions run-script build
   # run tests
-  - nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --reporter mocha-appveyor-reporter
+  - npm run-script test-appveyor
   - nyc report --reporter=lcov
   - ./node_modules/.bin/codecov -t ad05d2e5-42d1-4075-b570-ca452ddf24dd
 
