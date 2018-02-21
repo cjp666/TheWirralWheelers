@@ -1,14 +1,13 @@
 import { RideDetails } from "./../../functions/rideDetails";
 import * as chai from "chai";
-import { expect, should } from "chai";
+import { should } from "chai";
 import * as chaiAsPromised from "chai-as-promised";
 chai.use(chaiAsPromised);
 chai.should();
 
 const rideDetails = new RideDetails();
 
-const NO_RIDE_TODAY =
-    "I am sorry but there is no ride today, please ask me when the next ride is";
+const NO_RIDE_TODAY = "I am sorry but there is no ride today, please ask me when the next ride is";
 
 describe("no ride found message", function() {
     it("should return no last ride found", function() {
@@ -29,9 +28,7 @@ describe("no ride found message", function() {
     });
     it("should return no ride found for tomorrow", function() {
         const result = rideDetails.noRideDefaultText("tomorrows");
-        result.should.be.equal(
-            "I am sorry but there is no ride tomorrow, please ask me when the next ride is"
-        );
+        result.should.be.equal("I am sorry but there is no ride tomorrow, please ask me when the next ride is");
     });
     it("should return unknown", function() {
         const result = rideDetails.noRideDefaultText("someotherday");
@@ -65,33 +62,25 @@ describe("query date", function() {
     it("should return the same date for previous rides", function() {
         const date = new Date(2018, 2, 17, 13, 7, 0, 0);
         const result = rideDetails.getQueryDate("previous", date);
-        result
-            .getTime()
-            .should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
+        result.getTime().should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
     });
 
     it("should return the same date for next rides", function() {
         const date = new Date(2018, 2, 17, 13, 7, 0, 0);
         const result = rideDetails.getQueryDate("next", date);
-        result
-            .getTime()
-            .should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
+        result.getTime().should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
     });
 
     it("should return the same date for todays rides", function() {
         const date = new Date(2018, 2, 17, 13, 7, 0, 0);
         const result = rideDetails.getQueryDate("todays", date);
-        result
-            .getTime()
-            .should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
+        result.getTime().should.be.equal(new Date(2018, 2, 17, 0, 0, 0, 0).getTime());
     });
 
     it("should return the next day for tomorrows rides", function() {
         const date = new Date(2018, 2, 17, 13, 7, 0, 0);
         const result = rideDetails.getQueryDate("tomorrows", date);
-        result
-            .getTime()
-            .should.be.equal(new Date(2018, 2, 18, 0, 0, 0, 0).getTime());
+        result.getTime().should.be.equal(new Date(2018, 2, 18, 0, 0, 0, 0).getTime());
     });
 });
 

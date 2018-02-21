@@ -8,10 +8,12 @@ import * as admin from "firebase-admin";
 admin.initializeApp(functions.config().firebase);
 
 import { RideDetails } from "./rideDetails";
+import { AppendAnythingElse } from "./appendAnythingElse";
 
 const RIDE_INTENT = "ride";
 
 const rideDetails = new RideDetails();
+const appendAnythingElse = new AppendAnythingElse();
 
 let parameters = {
     rideDay: ""
@@ -38,9 +40,7 @@ function findRide(assistant) {
     rideDay = rideDay.toLowerCase();
 
     if (!rideDetails.isValidRideDay(rideDay)) {
-        return assistant.tell(
-            "I do not understand what day you want to know about"
-        );
+        return assistant.tell("I do not understand what day you want to know about");
     }
 
     return getRide(assistant, rideDay);
@@ -93,14 +93,5 @@ function processRides(assistant, rides, rideDay) {
             message = rideDetails.buildText(data, rideDay);
         });
     }
-    return assistant.ask(appendAnythingElse(message));
-}
-
-function appendAnythingElse(message) {
-    let result = message;
-    if (!result.endsWith(".")) {
-        result += ".";
-    }
-    result += " Is there anything else I can help you with?";
-    return result;
+    return assistant.ask(appendAnythingElse.append(message));
 }
