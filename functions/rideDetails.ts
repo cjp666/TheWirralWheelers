@@ -5,7 +5,7 @@ const TOMORROWS_RIDE = "tomorrows";
 
 export class RideDetails {
     /**
-     * Builds the text details of the ride to be returned to the Google Assitant
+     * Builds the text details of the ride to be returned to the Google Assistant
      * @param {*} ride - the rides collection item
      * @param {*} rideDay - valid values: previous / next / tomorrows / todays
      * @returns {string} the text representation of a ride
@@ -27,10 +27,7 @@ export class RideDetails {
 
         if (rideDay.toLowerCase() === PREVIOUS_RIDE) {
             message =
-                `The last ride was ${rideDate.toLocaleDateString(
-                    "en-gb",
-                    options
-                )}` +
+                `The last ride was ${rideDate.toLocaleDateString("en-gb", options)}` +
                 ` from ${ride.start} and was led by ${ride.rideLeader}` +
                 ` with lunch at ${ride.lunch}`;
             return message;
@@ -50,12 +47,8 @@ export class RideDetails {
         }
 
         message =
-            `${messageStart} ride is level ${
-                ride.level
-            } on ${rideDate.toLocaleDateString("en-gb", options)},` +
-            ` being led by ${ride.rideLeader} and will be leaving from ${
-                ride.start
-            }` +
+            `${messageStart} ride is level ${ride.level} on ${rideDate.toLocaleDateString("en-gb", options)},` +
+            ` being led by ${ride.rideLeader} and will be leaving from ${ride.start}` +
             ` heading for ${ride.lunch}`;
 
         return message;
@@ -78,28 +71,26 @@ export class RideDetails {
                     "I am sorry but I am unable to locate the details of the last ride, you might need to check the website or Facebook";
                 break;
             case TODAYS_RIDE:
-                message =
-                    "I am sorry but there is no ride today, please ask me when the next ride is";
+                message = "I am sorry but there is no ride today, please ask me when the next ride is";
                 break;
             case TOMORROWS_RIDE:
-                message =
-                    "I am sorry but there is no ride tomorrow, please ask me when the next ride is";
+                message = "I am sorry but there is no ride tomorrow, please ask me when the next ride is";
                 break;
         }
 
         return message;
     }
 
-    getQueryOperation(rideDay) {
+    getQueryOperation(rideDay): [string, string] {
         switch (rideDay.toLowerCase()) {
             case PREVIOUS_RIDE:
-                return "<";
+                return ["<", "desc"];
             case TODAYS_RIDE:
-                return "==";
+                return ["==", ""];
             case TOMORROWS_RIDE:
-                return "==";
+                return ["==", ""];
             default:
-                return ">=";
+                return [">=", "asc"];
         }
     }
 
