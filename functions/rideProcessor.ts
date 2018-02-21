@@ -26,28 +26,24 @@ export class RideProcessor {
         const queryOperation = queryOperations[0];
         const queryDirection = queryOperations[1];
 
+        let query: FirebaseFirestore.Query;
+
         if (queryOperation === "==") {
-            return admin
+            query = admin
                 .firestore()
                 .collection("rides")
                 .where(queryField, queryOperation, rideDate)
-                .limit(1)
-                .get()
-                .then(rides => {
-                    return this.processRides(assistant, rides, rideDay);
-                })
-                .catch(error => {
-                    console.error(error);
-                    throw error;
-                });
+                .limit(1);
+        } else {
+            query = admin
+                .firestore()
+                .collection("rides")
+                .where(queryField, queryOperation as any, rideDate)
+                .orderBy(queryField, queryDirection as any)
+                .limit(1);
         }
 
-        return admin
-            .firestore()
-            .collection("rides")
-            .where(queryField, queryOperation as any, rideDate)
-            .orderBy(queryField, queryDirection as any)
-            .limit(1)
+        return query
             .get()
             .then(rides => {
                 return this.processRides(assistant, rides, rideDay);

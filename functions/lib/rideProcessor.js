@@ -19,27 +19,23 @@ class RideProcessor {
         const rideDate = rideDetails.getQueryDate(rideDay, new Date());
         const queryOperation = queryOperations[0];
         const queryDirection = queryOperations[1];
+        let query;
         if (queryOperation === "==") {
-            return admin
+            query = admin
                 .firestore()
                 .collection("rides")
                 .where(queryField, queryOperation, rideDate)
-                .limit(1)
-                .get()
-                .then(rides => {
-                return this.processRides(assistant, rides, rideDay);
-            })
-                .catch(error => {
-                console.error(error);
-                throw error;
-            });
+                .limit(1);
         }
-        return admin
-            .firestore()
-            .collection("rides")
-            .where(queryField, queryOperation, rideDate)
-            .orderBy(queryField, queryDirection)
-            .limit(1)
+        else {
+            query = admin
+                .firestore()
+                .collection("rides")
+                .where(queryField, queryOperation, rideDate)
+                .orderBy(queryField, queryDirection)
+                .limit(1);
+        }
+        return query
             .get()
             .then(rides => {
             return this.processRides(assistant, rides, rideDay);
