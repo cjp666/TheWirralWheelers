@@ -5,8 +5,9 @@
         "codecov",
         "dialogflow",
         "firestore",
+        "gallary",
+        "someotherday",
         "thewirralwheelers",
-        "wirral",
-        "someotherday"
+        "wirral"
     ]
 }
