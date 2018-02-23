@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -6,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./app-navbar.component.css']
 })
 export class AppNavbarComponent implements OnInit {
-    constructor() {}
+    constructor(private location: Location, private router: Router) {}
 
     ngOnInit() {}
 
-    // isActive(title: string): boolean {
-    //     console.log(this.location.path);
-    //     return false;
-    // }
+    isActive(title: string): boolean {
+        return title === this.router.url;
+    }
 }
