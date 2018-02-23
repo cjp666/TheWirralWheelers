@@ -36,12 +36,41 @@
     </div>
 </div>
 
-<!-- TODO carousel -->
-<img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2FNewYearsEve2017.jpg?alt=media&token=72bf8278-81a5-499f-a82b-ccd0f5faa49b"
-    alt="">
-<img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto1.jpg?alt=media&token=7b2d9c66-a2ac-4d63-8dc2-e751a8397168"
-    alt="">
-<img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto2.png?alt=media&token=191ec9b1-cfd7-4a19-b80e-60e4fdb99dc6"
-    alt="">
-<img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto3.png?alt=media&token=5f5f39e5-2e8d-4b5c-8e3e-f8952beb854d"
-    alt="">
+<div class="carousel-container">
+    <ngb-carousel>
+        <ng-template ngbSlide>
+            <img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2FNewYearsEve2017.jpg?alt=media&token=72bf8278-81a5-499f-a82b-ccd0f5faa49b"
+                alt="New Years Eve club run">
+            <div class="carousel-caption">
+                <h3>New Year's Eve 2017</h3>
+                <p>New Year's Eve 2017 club run from New Brighton to West Kirby.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto1.jpg?alt=media&token=7b2d9c66-a2ac-4d63-8dc2-e751a8397168"
+                alt="Another club run">
+            <div class="carousel-caption">
+                <h3>Another club run</h3>
+                <p>Just another Sunday club run</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto3.png?alt=media&token=5f5f39e5-2e8d-4b5c-8e3e-f8952beb854d"
+                alt="Another club run to somewhere">
+            <div class="carousel-caption">
+                <h3>Another club run</h3>
+                <p>Yet another Sunday club run</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img src="https://firebasestorage.googleapis.com/v0/b/thewirralwheelers.appspot.com/o/home%2Fphoto2.png?alt=media&token=191ec9b1-cfd7-4a19-b80e-60e4fdb99dc6"
+                alt="Some of the longer standing members of the club">
+            <div class="carousel-caption">
+                <h3>The originals</h3>
+                <p>Some of the longer standing members of the club</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
