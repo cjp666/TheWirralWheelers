@@ -1,0 +1,15 @@
+ol {
+    counter-reset: item;
+}
+
+ol > li {
+    display: block;
+    list-style-position: inside;
+    text-indent: -2.3em;
+    padding-left: 2.3em;
+}
+
+ol > li:before {
+    content: counters(item, '.') ' - ';
+    counter-increment: item;
+}
