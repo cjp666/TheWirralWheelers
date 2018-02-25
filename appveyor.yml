@@ -34,7 +34,7 @@ test_script:
   - ./node_modules/.bin/codecov -t ad05d2e5-42d1-4075-b570-ca452ddf24dd
 
 # Don't actually build.
-build:
+build_script:
   - cd website
   - ng build --prod
   - cd ..
