@@ -1,35 +1,26 @@
 {
-    "hosting": {
-        "public": "./",
-        "ignore": [
-            "firebase.json",
-            "database-rules.json",
-            "storage.rules",
-            "functions"
-        ],
-        "headers": [
-            {
-                "source": "**/*.@(js|html)",
-                "headers": [
-                    {
-                        "key": "Cache-Control",
-                        "value": "max-age=0"
-                    }
-                ]
-            }
-        ],
-        "rewrites": [
-            {
-                "source": "**",
-                "destination": "/index.html"
-            }
-        ]
-    },
-    "firestore": {
-        "rules": "firestore.rules",
-        "indexes": "firestore.indexes.json"
-    },
-    "functions": {
-        "predeploy": ["npm --prefix functions run build"]
-    }
+  "hosting": {
+    "public": "website/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix functions run build"
+    ],
+    "source": "functions"
+  }
 }

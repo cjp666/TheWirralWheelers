@@ -9,8 +9,16 @@
         "test-appveyor": "nyc ./node_modules/.bin/mocha ./test/**/*.spec.ts --reporter mocha-appveyor-reporter"
     },
     "nyc": {
-        "extension": [".ts", ".tsx"],
-        "exclude": ["test/**/*.ts", "coverage/**/*.js", "scripts/main.js", "**/*.js"],
+        "extension": [
+            ".ts",
+            ".tsx"
+        ],
+        "exclude": [
+            "test/**/*.ts",
+            "coverage/**/*.js",
+            "scripts/main.js",
+            "**/*.js"
+        ],
         "all": true
     },
     "repository": {
