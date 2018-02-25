@@ -12,7 +12,7 @@ install:
   - npm i -g mocha chai ts-node
   - npm i -g nyc
   - npm i -g firebase-tools
-  - npm i -g aurelia-cli
+  - npm i -g angula-cli
   - npm install
   - cd functions
   - npm install
