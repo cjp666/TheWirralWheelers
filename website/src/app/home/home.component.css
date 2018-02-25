@@ -8,6 +8,7 @@ a:hover {
 }
 
 .carousel-container img {
+    display: block;
     width: 300px;
     height: 200px;
 }

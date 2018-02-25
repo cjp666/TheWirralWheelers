@@ -5,8 +5,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from './../environments/environment';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule } from 'ngx-bootstrap';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -29,12 +30,13 @@ import { GallaryComponent } from './gallary/gallary.component';
         GallaryComponent
     ],
     imports: [
-        BrowserModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule,
-        NgbModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        CarouselModule.forRoot(),
+        BsDropdownModule.forRoot(),
+        BrowserModule.withServerTransition({ appId: 'ngx-bootstrap' })
     ],
     providers: [],
     bootstrap: [AppComponent]

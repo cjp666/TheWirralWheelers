@@ -3,15 +3,39 @@
         <img src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Wirral Wheelers
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="btn-group" dropdown placement="bottom right">
+        <button dropdownToggle type="button" class="navbar-toggler btn btn-primary dropdown-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/rides">Rides</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/rideArchive">Ride Archive</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/proposedRides">Proposed Rides</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/gallary">Gallary</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/contact">Contact</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-link" routerLink="/about">About</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" [class.active]="isActive('/home') ? true : false">
-                <a class="nav-link" routerLink="/home">Home
-                </a>
+                <a class="nav-link" routerLink="/home">Home</a>
             </li>
             <li class="nav-item" [class.active]="isActive('/rides') ? true : false">
                 <a class="nav-link" routerLink="/rides">Rides</a>
