@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from './../environments/environment';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap';
@@ -16,6 +17,7 @@ import { RidesComponent } from './rides/rides.component';
 import { RideArchiveComponent } from './ride-archive/ride-archive.component';
 import { ProposedRidesComponent } from './proposed-rides/proposed-rides.component';
 import { GallaryComponent } from './gallary/gallary.component';
+import { RidesService } from './rides.service';
 
 @NgModule({
     declarations: [
@@ -33,12 +35,13 @@ import { GallaryComponent } from './gallary/gallary.component';
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule,
+        AngularFirestoreModule,
         AppRoutingModule,
         CarouselModule.forRoot(),
         BsDropdownModule.forRoot(),
         BrowserModule.withServerTransition({ appId: 'ngx-bootstrap' })
     ],
-    providers: [],
+    providers: [RidesService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
