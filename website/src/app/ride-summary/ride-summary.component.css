@@ -1,0 +1,15 @@
+.red-ride {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.blue-ride {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.green-ride {
+    background-color: rgba(0, 128, 0, 0.6);
+}
+
+.purple-ride {
+    background-color: rgba(128, 0, 128, 0.6);
+}

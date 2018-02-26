@@ -1,3 +1,4 @@
+import { Ride } from './../ride';
 import { Component, OnInit } from '@angular/core';
 import { RidesService } from './../rides.service';
 
@@ -9,13 +10,13 @@ import { RidesService } from './../rides.service';
 export class RidesComponent implements OnInit {
     constructor(private ridesService: RidesService) {}
 
-    rides: any[];
+    rides: Ride[];
 
     ngOnInit() {
         this.getRides();
     }
 
     getRides() {
-        this.ridesService.getFutureRides().subscribe(rides => (this.rides = rides));
+        this.ridesService.getFutureRides().subscribe(rides => (this.rides = rides as Ride[]));
     }
 }

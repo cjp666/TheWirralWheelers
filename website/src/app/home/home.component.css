@@ -3,15 +3,15 @@ a:hover {
 }
 
 .carousel-container {
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
-.carousel-container img {
+/* .carousel-container img {
     display: block;
     width: 300px;
     height: 200px;
-}
+} */
 
 .carousel-caption h3 {
     font-size: 12px;

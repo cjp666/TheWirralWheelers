@@ -18,6 +18,9 @@ import { RideArchiveComponent } from './ride-archive/ride-archive.component';
 import { ProposedRidesComponent } from './proposed-rides/proposed-rides.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { RidesService } from './rides.service';
+import { RideSummaryComponent } from './ride-summary/ride-summary.component';
+import { RidesOverviewComponent } from './rides-overview/rides-overview.component';
+import { RideSafetyComponent } from './ride-safety/ride-safety.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +32,10 @@ import { RidesService } from './rides.service';
         RidesComponent,
         RideArchiveComponent,
         ProposedRidesComponent,
-        GallaryComponent
+        GallaryComponent,
+        RideSummaryComponent,
+        RidesOverviewComponent,
+        RideSafetyComponent
     ],
     imports: [
         AngularFireModule.initializeApp(environment.firebase),

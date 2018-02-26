@@ -1,5 +1,14 @@
-<ul>
-    <li *ngFor="let item of rides">
-        {{item.description}}
-    </li>
-</ul>
+<div class="row d-block d-md-none pt-4">
+    <app-rides-overview></app-rides-overview>
+</div>
+
+<div class="row pt-4">
+    <div class="col-4 d-none d-md-block">
+        <app-rides-overview></app-rides-overview>
+        <br>
+        <app-ride-safety></app-ride-safety>
+    </div>
+    <div class="col">
+        <app-ride-summary *ngFor="let ride of rides" [ride]="ride"></app-ride-summary>
+    </div>
+</div>
