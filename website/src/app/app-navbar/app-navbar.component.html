@@ -8,53 +8,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/home">Home</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/rides">Rides</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/rideArchive">Ride Archive</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/proposedRides">Proposed Rides</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/gallary">Gallary</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/contact">Contact</a>
-            </li>
-            <li role="menuitem">
-                <a class="nav-link" routerLink="/about">About</a>
+            <li role="menuitem" *ngFor="let menuItem of menuItems">
+                <a class="nav-link" routerLink="{{menuItem.route}}">{{menuItem.title}}</a>
             </li>
         </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" [class.active]="isActive('/home') ? true : false">
-                <a class="nav-link" routerLink="/home">Home</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/rides') ? true : false">
-                <a class="nav-link" routerLink="/rides">Rides</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/rideArchive') ? true : false">
-                <a class="nav-link" routerLink="/rideArchive">Ride Archive</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/proposedRides') ? true : false">
-                <a class="nav-link" routerLink="/proposedRides">Proposed Rides</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/gallary') ? true : false">
-                <a class="nav-link" routerLink="/gallary">Gallary</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/contact') ? true : false">
-                <a class="nav-link" routerLink="/contact">Contact</a>
-            </li>
-            <li class="nav-item" [class.active]="isActive('/about') ? true : false">
-                <a class="nav-link" routerLink="/about">About</a>
-            </li>
+            <span *ngFor="let menuItem of menuItems">
+                <li class="nav-item">
+                    <a [class.active]="isActive(menuItem.route) ? true : false" class="nav-link" routerLink="{{menuItem.route}}">{{menuItem.title}}</a>
+                </li>
+            </span>
         </ul>
     </div>
 </nav>

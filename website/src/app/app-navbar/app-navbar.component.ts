@@ -10,9 +10,23 @@ import { Router } from '@angular/router';
 export class AppNavbarComponent implements OnInit {
     constructor(private location: Location, private router: Router) {}
 
+    menuItems: MenuItem[] = [
+        new MenuItem('Home', '/home'),
+        new MenuItem('Rides', '/rides'),
+        new MenuItem('Ride Archive', '/rideArchive'),
+        // new MenuItem('Proposed Rides', '/proposedRides'),
+        // new MenuItem('Gallary', '/gallary'),
+        new MenuItem('Contact', '/contact'),
+        new MenuItem('About', '/about')
+    ];
+
     ngOnInit() {}
 
-    isActive(title: string): boolean {
-        return title === this.router.url;
+    isActive(route: string): boolean {
+        return route === this.router.url;
     }
+}
+
+class MenuItem {
+    constructor(public title: string, public route: string) {}
 }
