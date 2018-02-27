@@ -17,6 +17,8 @@ export class RidesComponent implements OnInit {
     }
 
     getRides() {
-        this.ridesService.getFutureRides().subscribe(rides => (this.rides = rides as Ride[]));
+        this.ridesService.getFutureRides().subscribe(rides => {
+            this.rides = rides as Ride[];
+        });
     }
 }
