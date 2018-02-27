@@ -1,0 +1,13 @@
+<span *ngIf="ride">
+    <h1>Date: {{ride.date | date:'fullDate'}}</h1>
+    <h2>{{ride.title}}</h2>
+    <h3>Starting from: {{ride.start}}</h3>
+    <h3>Lunch: {{ride.lunch}}</h3>
+    <p>Level: {{ride.level}}</p>
+    <p>{{ride.description}}</p>
+    <div *ngFor="let comment of ride.comments">
+        <hr>
+        <h4>Posted by: {{comment.postedBy}}</h4>
+        <div [innerHtml]="comment.comment"></div>
+    </div>
+</span>

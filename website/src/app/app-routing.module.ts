@@ -1,3 +1,4 @@
+import { RideDetailsComponent } from './ride-details/ride-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'proposedRides', component: ProposedRidesComponent },
     { path: 'gallary', component: GallaryComponent },
     { path: 'gallery', component: GallaryComponent },
+    { path: 'rideDetails/:id', component: RideDetailsComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: NotFoundComponent }
 ];

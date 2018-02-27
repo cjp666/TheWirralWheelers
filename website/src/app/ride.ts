@@ -10,4 +10,11 @@ export class Ride {
     rideLeader: string;
     start: string;
     title: string;
+    comments: RideComment[];
+}
+
+class RideComment {
+    comment: string;
+    postedBy: string;
+    photos: string[];
 }

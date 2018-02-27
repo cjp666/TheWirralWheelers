@@ -1,13 +1,15 @@
 <div class="card mb-2 {{rideClass}}">
     <div class="card-body">
-        <span *ngIf="!ride.isEvent">
-            <h5 class="card-title">{{ride.date | date:'fullDate'}} - {{ride.title}}</h5>
-            <h6 class="card-subtitle mb-2">{{ride.description}}</h6>
-            <p class="pb-0 mb-0">Ride Leader: {{ride.rideLeader}}</p>
-        </span>
-        <span *ngIf="ride.isEvent">
-            <h5 class="card-title">{{ride.date | date:'fullDate'}} - {{ride.title}}</h5>
-            <h6 class="card-subtitle mb-2">{{ride.description}}</h6>
-        </span>
+        <a routerLink="/rideDetails/{{id}}">
+            <span *ngIf="!ride.isEvent">
+                <h5 class="card-title">{{ride.date | date:'fullDate'}} - {{ride.title}}</h5>
+                <h6 class="card-subtitle mb-2">{{ride.description}}</h6>
+                <p class="pb-0 mb-0">Ride Leader: {{ride.rideLeader}}</p>
+            </span>
+            <span *ngIf="ride.isEvent">
+                <h5 class="card-title">{{ride.date | date:'fullDate'}} - {{ride.title}}</h5>
+                <h6 class="card-subtitle mb-2">{{ride.description}}</h6>
+            </span>
+        </a>
     </div>
 </div>

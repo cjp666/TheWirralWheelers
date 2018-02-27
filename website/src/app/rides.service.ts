@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { Ride } from './ride';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class RidesService {
@@ -26,5 +28,10 @@ export class RidesService {
             .collection('rides', ref => ref.where('date', '<', date).orderBy('date', 'desc'))
             .valueChanges();
         return rides;
+    }
+
+    getRide(id: string): Observable<any> {
+        const ride = this.db.doc(`rides/${id}`).valueChanges();
+        return ride;
     }
 }

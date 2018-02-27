@@ -22,6 +22,7 @@ import { RideSummaryComponent } from './ride-summary/ride-summary.component';
 import { RidesOverviewComponent } from './rides-overview/rides-overview.component';
 import { RideSafetyComponent } from './ride-safety/ride-safety.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RideDetailsComponent } from './ride-details/ride-details.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
         RideSummaryComponent,
         RidesOverviewComponent,
         RideSafetyComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        RideDetailsComponent
     ],
     imports: [
         AngularFireModule.initializeApp(environment.firebase),

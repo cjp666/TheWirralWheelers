@@ -27,4 +27,16 @@ export class RideSummaryComponent implements OnInit {
         }
         return 'purple-ride';
     }
+
+    get id(): string {
+        if (!!this.ride) {
+            return (
+                this.ride.date
+                    .toISOString()
+                    .slice(0, 10)
+                    .replace(/-/g, '') + this.ride.level.substring(0, 1)
+            );
+        }
+        return '';
+    }
 }
